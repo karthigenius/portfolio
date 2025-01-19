@@ -1,0 +1,258 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333; /* Dark gray text for better readability */
+    background: linear-gradient(135deg, #8e44ad, #3498db); /* Gradient background from purple to blue */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #4CAF50, #1D8F60); /* Elegant green gradient background */
+    color: #fff;
+    padding: 80px 0; /* Added extra padding for spacious feel */
+    text-align: center;
+    border-bottom: 10px solid #2980b9; /* Blue border for separation */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for a 3D effect */
+}
+
+header .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.2;
+}
+
+header .location {
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+header .email-link {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+header .email-link:hover {
+    color: #e67e22; /* Highlight on hover */
+}
+
+header .social-links {
+    margin-top: 20px;
+}
+
+header .social-link {
+    display: inline-block;
+    margin: 10px 15px;
+    color: #fff;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header .social-link:hover {
+    color: #e67e22; /* Elegant hover color */
+}
+
+header .social-link i {
+    margin-right: 8px;
+}
+
+/* Section Container */
+.section-container {
+    background-color: #ffffff;
+    padding: 40px;
+    margin: 30px 0;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-container:hover {
+    transform: translateY(-8px); /* Smooth hover effect */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
+}
+
+h2 {
+    color: #2c3e50;
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #e67e22; /* Bold orange underline */
+    padding-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+ul li a {
+    color: #2c3e50; /* Dark blue for professionalism */
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #e67e22; /* Elegant hover effect */
+    text-decoration: underline;
+}
+
+/* Education Section */
+.education-list {
+    margin-top: 10px;
+}
+
+.education-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.education-item:last-child {
+    border-bottom: none;
+}
+
+.edu-details {
+    font-weight: 600;
+    color: #2980b9; /* Professional blue */
+}
+
+.edu-info {
+    text-align: right;
+}
+
+.cgpa {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #27ae60; /* Rich green for CGPA */
+}
+
+.year {
+    font-size: 1.1em;
+    color: #7f8c8d; /* Muted gray for the year */
+}
+
+/* Project Section */
+.project {
+    background-color: #f9f9f9; /* Light gray background for projects */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for project cards */
+}
+
+.project h3 {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555; /* Dark gray text for project details */
+}
+
+.project strong {
+    font-weight: 600;
+    color: #2980b9; /* Blue for emphasis */
+}
+
+.project .role, .project .environment {
+    font-style: italic;
+    color: #7f8c8d; /* Muted gray for the role/environment */
+}
+
+.project .duration {
+    font-weight: 600;
+    color: #27ae60; /* Green for duration */
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50; /* Elegant dark blue */
+    color: #ecf0f1; /* Light text */
+    padding: 30px;
+    text-align: center;
+    border-top: 10px solid #e67e22; /* Bold orange top border */
+}
+
+footer p {
+    font-size: 1.2em;
+}
+
+footer a {
+    color: #ecf0f1; /* Footer links in light color */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    color: #e67e22; /* Orange on hover for footer links */
+}
+
+/* Button Styles */
+button {
+    background-color: #e67e22; /* Elegant orange for buttons */
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #d35400; /* Darker orange on hover */
+    transform: translateY(-5px); /* Slight lift effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em; /* Slightly smaller font size for mobile */
+    }
+
+    h2 {
+        font-size: 2em; /* Adjust heading size */
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .project h3 {
+        font-size: 1.5em;
+    }
+
+    .project p {
+        font-size: 1em;
+    }
+}
