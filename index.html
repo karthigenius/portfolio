@@ -4,35 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Karthikeyan Surendran - Portfolio</title>
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS Library CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="header-content">
+    <header class="text-center py-5 bg-primary text-white">
+        <div class="container">
             <h1>Karthikeyan Surendran</h1>
-            <p class="location">Chennai, Tamil Nadu, India | <a href="mailto:karthikeyanofficial24@gmail.com" class="email-link">karthikeyanofficial24@gmail.com</a></p>
+            <p class="lead location">Chennai, Tamil Nadu, India | <a href="mailto:karthikeyanofficial24@gmail.com" class="email-link text-white">karthikeyanofficial24@gmail.com</a></p>
             <div class="social-links">
-                <a href="https://linkedin.com/in/karthikeyan-surendran" target="_blank" class="social-link">
+                <a href="https://linkedin.com/in/karthikeyan-surendran" target="_blank" class="social-link mx-2">
                     <i class="fab fa-linkedin"></i> LinkedIn
                 </a>
-                <a href="https://github.com/karthigenius" target="_blank" class="social-link">
+                <a href="https://github.com/karthigenius" target="_blank" class="social-link mx-2">
                     <i class="fab fa-github"></i> GitHub
                 </a>
             </div>
         </div>
     </header>    
 
-    <main class="container">
-        <section class="section-container">
+    <main class="container my-5">
+        <section class="section-container" data-aos="fade-up">
             <h2>Summary</h2>
             <p>
                 As an MCA graduate with a passion for software testing, I have developed a strong technical foundation and a keen eye for detail. I am proficient in a variety of programming languages and technologies, with hands-on experience in full-stack development, database management, and machine learning. I strive to ensure software quality through comprehensive testing and innovative problem-solving. My projects, ranging from web development to deep learning, reflect my ability to create reliable, user-centric solutions. Now, I am eager to contribute my skills and grow in the field of software testing, continuously learning and applying new technologies to create high-quality, scalable applications.
             </p>
         </section>
-
-        <section class="section-container">
+        <section class="section-container" data-aos="fade-up">
             <h2>Education</h2>
             <div class="education-list">
                 <div class="education-item">
@@ -58,14 +66,14 @@
             </div>
         </section>
 
-        <section class="section-container">
+        <section class="section-container" data-aos="fade-up"> 
             <h2>Technical Skills</h2>
             <p><strong>Languages / Script:</strong> C, C++, Java, Python, Pawn, LUA, Dart, Flutter, C#</p>
             <p><strong>Database:</strong> MySQL, SQLite</p>
             <p><strong>Web Development:</strong> Node.js, Express.js, REST API, HTML, CSS, PHP, JavaScript, Bootstrap, React</p>
         </section>
 
-        <section class="section-container">
+        <section class="section-container" data-aos="fade-up">
             <h2>Projects</h2>
             <div class="project">
                 <h3>Grand Theft Auto: San Andreas Multiplayer Server</h3>
@@ -108,7 +116,7 @@
             </div>
         </section>
 
-        <section class="section-container">
+        <section class="section-container" data-aos="fade-up">
             <h2>Internships</h2>
             <ul>
                 <li><strong>Python Internship</strong> – Wise Tech Source, Coimbatore [Apr 2021 – Jul 2021]</li>
@@ -117,7 +125,7 @@
             </ul>
         </section>
 
-        <section class="section-container">
+        <section class="section-container" data-aos="fade-up">
             <h2>Certifications</h2>
             <ul>
                 <li><a href="https://www.coursera.org/account/accomplishments/records/VU9KN8TTQ8AE" target="_blank">Introduction to Back-End Development</a></li>
@@ -131,9 +139,20 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="text-center py-4 bg-dark text-white">
         <p>&copy; <span id="year"></span> Karthikeyan Surendran. All rights reserved.</p>
     </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- AOS Library JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Custom JS -->
     <script src="script.js"></script>
+    <script>
+        AOS.init(); // Initialize AOS for scroll animations
+    </script>
 </body>
 </html>
