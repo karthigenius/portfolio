@@ -37,7 +37,7 @@ header h1:hover {
     transform: scale(1.1);
 }
 
-header .location{
+header .location {
     font-size: 1.1em;
 }
 
@@ -218,6 +218,7 @@ button:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Particle Background */
 #particles-js {
     position: fixed;
     width: 100%;
@@ -226,8 +227,7 @@ button:hover {
     z-index: -1;
 }
 
-
-/* Responsive */
+/* Responsive - Tablet */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2.5em;
@@ -245,5 +245,69 @@ button:hover {
     .experience-item {
         flex-direction: column;
         text-align: center;
+    }
+
+    .edu-info {
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 576px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header .location {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    .section-container {
+        padding: 20px 15px;
+    }
+
+    .social-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-link {
+        margin: 8px 0;
+    }
+
+    .education-item,
+    .experience-item {
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .edu-info {
+        text-align: left;
+        margin-top: 10px;
+    }
+
+    ul li {
+        font-size: 1em;
+    }
+
+    .project h3,
+    .experience-item h3 {
+        font-size: 1.4em;
+    }
+
+    button {
+        font-size: 0.95em;
+        padding: 8px 16px;
+    }
+
+    footer p {
+        font-size: 1em;
     }
 }
