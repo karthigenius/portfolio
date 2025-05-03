@@ -3,191 +3,699 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Karthikeyan Surendran's Portfolio - Full-Stack Developer, Game Scripter, and Data Analyst based in Chennai.">
-    <meta name="keywords" content="Karthikeyan Surendran, Full Stack Developer, Data Analyst, Game Developer, Portfolio, Chennai">
-
-    <title>Portfolio - Karthikeyan Surendran</title>
-    <!-- Favicon -->
+    <meta name="description" content="Karthikeyan Surendran - Full-Stack Developer, Game Developer & Data Analyst Portfolio">
+    <meta name="keywords" content="Karthikeyan Surendran, Full Stack Developer, Game Developer, Data Analyst, Portfolio">
+    <meta name="theme-color" content="#2563eb">
+    <meta property="og:title" content="Karthikeyan Surendran - Portfolio">
+    <meta property="og:description" content="Full-Stack Developer, Game Developer & Data Analyst">
+    <meta property="og:type" content="website">
+    
+    <title>Karthikeyan Surendran - Portfolio</title>
+    
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- AOS Library CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    <!-- Custom CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 </head>
-<body>
-    <div id="particles-js"></div>
-    <header class="text-center py-5 bg-primary text-white">
-        <div class="container" data-aos="fade-down" data-aos-duration="3000">
-            <h1 class="animated-header">Karthikeyan Surendran</h1>
-            <p class="lead location">Chennai, Tamil Nadu, India</p>
-            <div class="social-links">
-                <a href="https://linkedin.com/in/karthikeyan-surendran" target="_blank" class="social-link" aria-label="LinkedIn Profile">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-                <a href="mailto:karthikeyanofficial24@gmail.com" class="social-link" aria-label="Email Karthikeyan">
-                    <i class="fas fa-envelope"></i> karthikeyanofficial24@gmail.com
-                </a>
-                <a href="https://github.com/karthigenius" target="_blank" class="social-link" aria-label="GitHub Profile">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <nav class="fixed w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg z-50 border-b border-gray-200 dark:border-gray-700">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-blue-600 dark:text-blue-400">KS</a>
+                <div class="flex items-center gap-6">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#certificates" class="nav-link">Certificates</a>
+                    <button id="theme-toggle" class="theme-toggle-btn p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-300" aria-label="Toggle theme">
+                        <span class="light-theme-icon">
+                            <i class="fas fa-sun text-yellow-500"></i>
+                        </span>
+                        <span class="dark-theme-icon">
+                            <i class="fas fa-moon text-blue-300"></i>
+                        </span>
+                    </button>
+                </div>
             </div>
         </div>
-    </header>    
+    </nav>
 
-    <main class="container my-5">
-        <section class="section-container" data-aos="fade-up" data-aos-duration="3000">
-            <h2 class="hover-effect">Summary</h2>
-            <li>Full-Stack Developer & Game Scripter with expertise in web, app development, and game scripting.</li>
-            <li>Skilled in Data Analytics using Python, R, SQL, Pandas, Spreadsheet, and Tableau for insights and visualization.</li>
-            <li>Experienced in Software Testing, ensuring quality through manual and automated testing.</li>
-            <li>Passionate Problem-Solver, open to roles in development, analytics, and testing.</li>
-        </section>
-        <section class="section-container" data-aos="fade-right" data-aos-duration="3000">
-            <h2>Education</h2>
-            <div class="education-list">
-                <div class="education-item">
-                    <div class="edu-details">
-                        <strong>SRM Institute of Science and Technology</strong><br>
-                        Master of Computer Application
-                    </div>
-                    <div class="edu-info">
-                        <span class="cgpa">CGPA: 8.45</span><br>
-                        <span class="year">2021 – 2023</span>
-                    </div>
+    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20 dark:from-blue-900/30 dark:to-purple-900/30"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 text-gray-900 dark:text-white animate-fade-in">
+                    Karthikeyan Surendran
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 animate-fade-in-delay">
+                    Full-Stack Developer | Game Developer | Data Analyst
+                </p>
+                <div class="flex justify-center gap-4 animate-fade-in-delay-2">
+                    <a href="https://linkedin.com/in/karthikeyan-surendran" target="_blank" 
+                       class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/karthigenius" target="_blank" 
+                       class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:karthikeyanofficial24@gmail.com" 
+                       class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
                 </div>
-                <div class="education-item">
-                    <div class="edu-details">
-                        <strong>Hindustan College of Arts and Science</strong><br>
-                        Bachelor of Science in Computer Science
-                    </div>
-                    <div class="edu-info">
-                        <span class="cgpa">CGPA: 7.57</span><br>
-                        <span class="year">2018 – 2021</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-container" data-aos="fade-left" data-aos-duration="3000">
-            <h2>Experience</h2>
-            <div class="experience-list">
-                <div class="experience-item">
-                    <h3><a href="assets/mte.pdf" target="_blank">Data Analytics Trainee</a> - MedTourEasy, Remote</h3>
-                    <p><strong>Duration:</strong> Feb 2025 (1 Month)</p>
-                    <li>Utilized Python, Pandas, SQL, and data visualization tools to analyze datasets for the Predict Blood Donations project.</li>
-                    <li>Collaborated with a mentor at MedTourEasy to enhance data-driven decision-making processes.</li>
-                    <li>Received a Letter of Appreciation for outstanding performance in developing insights through data analytics techniques.</li>
+                <div class="mt-12">
+                    <a href="#about" class="scroll-btn">
+                        <span class="animate-bounce block">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </a>
                 </div>
             </div>
-            <div class="experience-list">
-                <div class="experience-item">
-                    <h3><a href="assets/techplement.pdf" target="_blank">Full Stack Developer Internship</a> - Techplement, Remote</h3>
-                    <p><strong>Duration:</strong> Sep 2024 (1 Month)</p>
-                    <li>Built responsive web applications using HTML, CSS, and JavaScript for optimal performance.</li>
-                    <li>Integrated RESTful APIs to improve user interaction and functionality.</li>
-                    <li>Collaborated with designers and back-end developers to deliver efficient web solutions.</li>
-                    <li>Optimized website performance for enhanced user experience and faster load times.</li>
+        </div>
+        <div id="particles-js" class="absolute inset-0 z-0"></div>
+    </section>
+
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <p class="text-lg text-gray-600 dark:text-gray-300">
+                        I'm a passionate Full-Stack Developer and Game Developer with expertise in creating 
+                        innovative digital solutions. My journey in technology has led me to work on diverse 
+                        projects, from web applications to multiplayer game servers.
+                    </p>
+                    <p class="text-lg text-gray-600 dark:text-gray-300">
+                        With a strong foundation in data analytics, I bring a unique perspective to 
+                        problem-solving, combining technical expertise with analytical thinking.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#projects" class="btn-primary">View Projects</a>
+                        <a href="#contact" class="btn-secondary">Contact Me</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="aspect-square rounded-2xl bg-gradient-to-br from-blue-500 to-purple-500 p-1">
+                        <div class="rounded-2xl bg-white dark:bg-gray-900 p-6 h-full">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="stat-card">
+                                    <h3 class="text-4xl font-bold text-blue-600 dark:text-blue-400">3+</h3>
+                                    <p>Years Experience</p>
+                                </div>
+                                <div class="stat-card">
+                                    <h3 class="text-4xl font-bold text-purple-600 dark:text-purple-400">20+</h3>
+                                    <p>Projects</p>
+                                </div>
+                                <div class="stat-card">
+                                    <h3 class="text-4xl font-bold text-green-600 dark:text-green-400">15+</h3>
+                                    <p>Technologies</p>
+                                </div>
+                                <div class="stat-card">
+                                    <h3 class="text-4xl font-bold text-orange-600 dark:text-orange-400">3k+</h3>
+                                    <p>Users Reached</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="section-container" data-aos="zoom-in-down" data-aos-duration="3000"> 
-            <h2>Skills</h2>
-            <p><strong>Programming:</strong> C, C++, Java, Python, Dart, C#, JavaScript, Pawn, LUA</p>
-            <p><strong>Web & App Development:</strong> Node.js, Express.js, React, Flutter, HTML, CSS, PHP, Bootstrap</p>
-            <p><strong>Data & Analytics:</strong> SQL, Pandas, R, Data Cleaning, Visualization, Spreadsheets</p>
-            <p><strong>Databases:</strong> MySQL, SQLite, PostgreSQL, MongoDB</p>
-            <p><strong>Soft Skills:</strong> Verbal Communication, Problem-Solving, Team Collaboration, Independent Decision-Making</p>
-        </section>
+    <section id="experience" class="py-20 bg-gray-100 dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title">Experience</h2>
+            <div class="space-y-8">
+                <div class="experience-card">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 rounded-full bg-white dark:bg-gray-700 flex items-center justify-center">
+                            <i class="fas fa-chart-line text-2xl text-blue-600 dark:text-blue-400"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold">Data Analytics Trainee</h3>
+                            <p class="text-gray-600 dark:text-gray-400">MedTourEasy | Feb 2025</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 ml-6">
+                        <li class="experience-list-item">
+                            Utilized Python, Pandas, and SQL for data analysis
+                        </li>
+                        <li class="experience-list-item">
+                            Developed insights through data analytics techniques
+                        </li>
+                        <li class="experience-list-item">
+                            Received appreciation for outstanding performance
+                        </li>
+                    </ul>
+                </div>
 
-        <section class="section-container" data-aos="zoom-in-up" data-aos-duration="3000">
-            <h2>Projects</h2>
-            <div class="project" data-aos="flip-down" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
-                <h3>Intelligent Assessment Management System</h3>
-                <p><strong>Duration:</strong> Nov 2024 – Present</p>
-                <li>Built a web application for managing candidate assessments, featuring secure authentication and real-time response tracking.</li>
-                <li>Designed APIs for response handling, score calculations, and report generation.</li>
-                <li>Enhanced usability with intuitive navigation and dynamic form validations.</li>
-                <p><strong>Environment:</strong> Ubuntu, Node.js, Express.js, JavaScript, MySQL, HTML, CSS, REST APIs</p>
+                <div class="experience-card">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 rounded-full bg-white dark:bg-gray-700 flex items-center justify-center">
+                            <i class="fas fa-code text-2xl text-purple-600 dark:text-purple-400"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold">Full Stack Developer Internship</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Techplement | Sep 2024</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 ml-6">
+                        <li class="experience-list-item">
+                            Built responsive web applications with modern technologies
+                        </li>
+                        <li class="experience-list-item">
+                            Integrated RESTful APIs for enhanced functionality
+                        </li>
+                        <li class="experience-list-item">
+                            Optimized website performance and user experience
+                        </li>
+                    </ul>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <div class="project" data-aos="flip-down" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
-                <h3>Grand Theft Auto: San Andreas Multiplayer Server</h3>
-                <p><strong>Duration:</strong> Oct 2021 – Present</p>
-                <li>Developed custom scripts to enhance the multiplayer experience, including user registration and spawn features.</li>
-                <li>Hosted the server on Google Cloud, managing a global user base of over 3,000 players.</li>
-                <li>Conducted end-to-end tasks: requirement analysis, development, testing, and deployment.</li>
-                <p><strong>Environment:</strong> Ubuntu, Pawn, C, C++, MySQL, Google Cloud</p>
+    <section id="projects" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="project-card group">
+                    <div class="relative overflow-hidden rounded-t-xl">
+                        <img src="assets/iam.png" alt="Project 1" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <div class="space-x-2">
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Express</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Intelligent Assessment System</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            A web application for managing candidate assessments with real-time tracking.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-card group">
+                    <div class="relative overflow-hidden rounded-t-xl">
+                        <img src="assets/acrp.png" alt="Project 2" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <div class="space-x-2">
+                                <span class="tech-tag">C++</span>
+                                <span class="tech-tag">Pawn</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">GTA:SA Multiplayer Server</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Custom multiplayer server with advanced features and 3000+ active users.
+                        </p>
+                        <div class="flex justify-start items-center">
+                            <a href="https://discord.com/servers/atlantic-city-roleplay-855732105682485248" class="text-blue-600 dark:text-blue-400 hover:underline">
+                                View Project <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card group">
+                    <div class="relative overflow-hidden rounded-t-xl">
+                        <img src="assets/ddd.png" alt="Project 3" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">OpenCV</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Driver Drowsiness Detection</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            AI-powered system for real-time drowsiness detection using CNN.
+                        </p>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <div class="project" data-aos="flip-down" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
-                <h3>Driver Drowsiness Detection</h3>
-                <p><strong>Duration:</strong> Dec 2022 – Apr 2023</p>
-                <li>Created a deep learning-based application to detect drowsiness using a Convolutional Neural Network (CNN).</li>
-                <li>Implemented an alert system for enhanced safety and real-time monitoring.</li>
-                <li>Designed a GUI dashboard to display overlay statistics and alerts.</li>
-                <p><strong>Environment:</strong> Windows, Python, TensorFlow, OpenCV, VS Code</p>
+    <section id="skills" class="py-20 bg-gray-100 dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="skill-category-card">
+                    <div class="skill-icon bg-blue-100 dark:bg-blue-900">
+                        <i class="fas fa-code text-blue-600 dark:text-blue-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Programming</h3>
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span>Python</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span>JavaScript</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span>Java</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category-card">
+                    <div class="skill-icon bg-purple-100 dark:bg-purple-900">
+                        <i class="fas fa-laptop-code text-purple-600 dark:text-purple-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Web Development</h3>
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span>React</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span>Node.js</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span>Flutter</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category-card">
+                    <div class="skill-icon bg-green-100 dark:bg-green-900">
+                        <i class="fas fa-database text-green-600 dark:text-green-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Data & Analytics</h3>
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span>SQL</span>
+                                <span>92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span>Pandas</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span>Visualization</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category-card">
+                    <div class="skill-icon bg-orange-100 dark:bg-orange-900">
+                        <i class="fas fa-users text-orange-600 dark:text-orange-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Soft Skills</h3>
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span>Problem Solving</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span>Communication</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span>Leadership</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <div class="project" data-aos="flip-down" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
-                <h3>Image Colorization Tool</h3>
-                <p><strong>Duration:</strong> Jul 2022 – Nov 2022</p>
-                <li>Built a tool to colorize black-and-white images using CNN algorithms.</li>
-                <li>Designed and implemented a GUI for live colorization with OpenCV and tkinter.</li>
-                <li>Led a team of three, managing task distribution and code reviews.</li>
-                <p><strong>Environment:</strong> Windows, Python, OpenCV, tkinter, VS Code</p>
+    <section id="certificates" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title">Certifications</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="project-card group">
+                    <div class="relative overflow-hidden rounded-t-xl">
+                        <div class="w-full h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
+                            <i class="fab fa-google text-6xl text-blue-500"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <div class="space-x-2">
+                                <span class="tech-tag">Data Analytics</span>
+                                <span class="tech-tag">SQL</span>
+                                <span class="tech-tag">R</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Google Data Analytics</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Comprehensive specialization covering data analytics tools and techniques
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <a href="https://www.coursera.org/account/accomplishments/specialization/LTC2VE3IVH3Y" 
+                               target="_blank"
+                               class="text-blue-600 dark:text-blue-400 hover:underline">
+                                View Certificate <i class="fas fa-external-link-alt ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card group">
+                    <div class="relative overflow-hidden rounded-t-xl">
+                        <div class="w-full h-48 bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center">
+                            <i class="fas fa-code text-6xl text-purple-500"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <div class="space-x-2">
+                                <span class="tech-tag">C</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">DSA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Programming Languages</h3>
+                        <ul class="space-y-3 mb-4">
+                            <li>
+                                <a href="https://www.guvi.in/share-certificate/71s3q837n78Z87Pi5b" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
+                                    C Programming <i class="fas fa-external-link-alt ml-2"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.coursera.org/account/accomplishments/certificate/2QNUATCNRTCA" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
+                                    Python Programming <i class="fas fa-external-link-alt ml-2"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.coursera.org/account/accomplishments/certificate/9DUPXHYDWSR4" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
+                                    Python Data Structures <i class="fas fa-external-link-alt ml-2"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card group">
+                    <div class="relative overflow-hidden rounded-t-xl">
+                        <div class="w-full h-48 bg-gradient-to-br from-green-500/20 to-teal-500/20 flex items-center justify-center">
+                            <i class="fas fa-laptop-code text-6xl text-green-500"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <div class="space-x-2">
+                                <span class="tech-tag">Frontend</span>
+                                <span class="tech-tag">Backend</span>
+                                <span class="tech-tag">Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Web Development</h3>
+                        <ul class="space-y-3 mb-4">
+                            <li>
+                                <a href="assets/acmegrade.jpg" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
+                                    Web Development Complete <i class="fas fa-external-link-alt ml-2"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.coursera.org/account/accomplishments/records/VU9KN8TTQ8AE" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
+                                    Back-End Development <i class="fas fa-external-link-alt ml-2"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.coursera.org/account/accomplishments/records/XSRYN97YHTEK" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
+                                    Front-End Development <i class="fas fa-external-link-alt ml-2"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.guvi.in/share-certificate/76A48c4Gpv71a37JT8" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
+                                    Node.js <i class="fas fa-external-link-alt ml-2"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card group">
+                    <div class="relative overflow-hidden rounded-t-xl">
+                        <div class="w-full h-48 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 flex items-center justify-center">
+                            <i class="fas fa-mobile-alt text-6xl text-yellow-500"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <div class="space-x-2">
+                                <span class="tech-tag">Flutter</span>
+                                <span class="tech-tag">Game Dev</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Mobile & Game Dev</h3>
+                        <ul class="space-y-3 mb-4">
+                            <li>
+                                <a href="https://www.guvi.in/share-certificate/yl5i7Y17g6Tn562p37" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
+                                    Flutter Development <i class="fas fa-external-link-alt ml-2"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="assets/pfg.pdf" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
+                                    Programming for Games <i class="fas fa-external-link-alt ml-2"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card group">
+                    <div class="relative overflow-hidden rounded-t-xl">
+                        <div class="w-full h-48 bg-gradient-to-br from-red-500/20 to-pink-500/20 flex items-center justify-center">
+                            <i class="fas fa-chart-bar text-6xl text-red-500"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <div class="space-x-2">
+                                <span class="tech-tag">Pandas</span>
+                                <span class="tech-tag">Python</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Data Analytics</h3>
+                        <ul class="space-y-3 mb-4">
+                            <li>
+                                <a href="https://www.guvi.in/share-certificate/8uX80S13L350713793" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
+                                    Data Analytics Using Pandas <i class="fas fa-external-link-alt ml-2"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="assets/wts.pdf" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
+                                    Python – Basics <i class="fas fa-external-link-alt ml-2"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card group">
+                    <div class="relative overflow-hidden rounded-t-xl">
+                        <div class="w-full h-48 bg-gradient-to-br from-indigo-500/20 to-blue-500/20 flex items-center justify-center">
+                            <i class="fas fa-network-wired text-6xl text-indigo-500"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <div class="space-x-2">
+                                <span class="tech-tag">Networking</span>
+                                <span class="tech-tag">IT Support</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">IT Fundamentals</h3>
+                        <ul class="space-y-3 mb-4">
+                            <li>
+                                <a href="https://www.coursera.org/account/accomplishments/certificate/FYMCNBTAEUM2" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
+                                    Computer Networking <i class="fas fa-external-link-alt ml-2"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.coursera.org/account/accomplishments/certificate/Z3GWHWK3XFVP" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
+                                    Technical Support Fundamentals <i class="fas fa-external-link-alt ml-2"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <div class="project" data-aos="flip-down" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
-                <h3>Product Stock Tracker</h3>
-                <p><strong>Duration:</strong> Dec 2020 – Apr 2021</p>
-                <li>Developed software to monitor inventory levels and trigger email alerts for low stock thresholds.</li>
-                <li>Designed user-friendly interfaces for suppliers, administrators, and reporting modules.</li>
-                <li>Integrated backend models for efficient data processing and retrieval.</li>
-                <p><strong>Environment:</strong> Windows, Python, MySQL, tkinter, VS Code</p>
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">
+                        I'm always interested in hearing about new projects and opportunities. 
+                        Feel free to reach out if you want to connect!
+                    </p>
+                    <div class="space-y-4">
+                        <a href="mailto:karthikeyanofficial24@gmail.com" 
+                           class="contact-link">
+                            <i class="fas fa-envelope w-8"></i>
+                            karthikeyanofficial24@gmail.com
+                        </a>
+                        <a href="https://linkedin.com/in/karthikeyan-surendran" 
+                           class="contact-link" target="_blank">
+                            <i class="fab fa-linkedin w-8"></i>
+                            LinkedIn Profile
+                        </a>
+                        <a href="https://github.com/karthigenius" 
+                           class="contact-link" target="_blank">
+                            <i class="fab fa-github w-8"></i>
+                            GitHub Profile
+                        </a>
+                    </div>
+                </div>
+                <form id="contact-form" class="space-y-6" action="mailto:karthikeyanofficial24@gmail.com" method="GET" enctype="text/plain">
+                    <div>
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+                    <div>
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+                    <div>
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" name="message" rows="4" class="form-input" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary w-full">
+                        Send Message <i class="fas fa-paper-plane ml-2"></i>
+                    </button>
+                </form>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="section-container" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-            <h2>Certifications</h2>
-            <ul>
-                <li><a href="https://www.coursera.org/account/accomplishments/specialization/LTC2VE3IVH3Y" target="_blank">Google Data Analytics Specialization</a></li>
-                <li><a href="https://www.guvi.in/share-certificate/71s3q837n78Z87Pi5b" target="_blank">C Programming</a></li>
-                <li><a href="https://www.guvi.in/share-certificate/8uX80S13L350713793" target="_blank">Data Analytics Using Pandas</a></li>
-                <li><a href="https://www.guvi.in/share-certificate/yl5i7Y17g6Tn562p37" target="_blank">Flutter</a></li>
-                <li><a href="https://www.guvi.in/share-certificate/76A48c4Gpv71a37JT8" target="_blank">Node.js</a></li>
-                <li><a href="https://www.coursera.org/account/accomplishments/records/VU9KN8TTQ8AE" target="_blank">Introduction to Back-End Development</a></li>
-                <li><a href="https://www.coursera.org/account/accomplishments/records/XSRYN97YHTEK" target="_blank">Introduction to Front-End Development</a></li>
-                <li><a href="assets/acmegrade.jpg" target="_blank">Web Development</a></li>
-                <li><a href="assets/wts.pdf" target="_blank">Python – Basics</a></li>
-                <li><a href="https://www.coursera.org/account/accomplishments/certificate/9DUPXHYDWSR4" target="_blank">Python Data Structures</a></li>
-                <li><a href="https://www.coursera.org/account/accomplishments/certificate/FYMCNBTAEUM2" target="_blank">The Bits and Bytes of Computer Networking</a></li>
-                <li><a href="https://www.coursera.org/account/accomplishments/certificate/2QNUATCNRTCA" target="_blank">Programming for Everybody (Getting Started with Python)</a></li>
-                <li><a href="https://www.coursera.org/account/accomplishments/certificate/Z3GWHWK3XFVP" target="_blank">Technical Support Fundamentals</a></li>
-                <li><a href="assets/pfg.pdf" target="_blank">Programming for Games</a></li>
-            </ul>
-        </section>
-    </main>
-
-    <footer class="text-center py-4 bg-dark text-white">
-        <p>&copy; <span id="year"></span> Karthikeyan Surendran. All rights reserved.</p>
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">KS</h3>
+                    <p class="text-gray-400">
+                        Creating innovative solutions through code and creativity.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="footer-link">About</a></li>
+                        <li><a href="#experience" class="footer-link">Experience</a></li>
+                        <li><a href="#certificates" class="footer-link">Certificates</a></li>
+                        <li><a href="#projects" class="footer-link">Projects</a></li>
+                        <li><a href="#skills" class="footer-link">Skills</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Connect</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://linkedin.com/in/karthikeyan-surendran" target="_blank" 
+                           class="footer-social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/karthigenius" target="_blank" 
+                           class="footer-social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:karthikeyanofficial24@gmail.com" 
+                           class="footer-social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; <span id="year"></span> Karthikeyan Surendran. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- AOS Library JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <!-- Particle Library JS-->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 transition-opacity duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <!-- Custom JS -->
     <script src="script.js"></script>
 </body>
 </html>
