@@ -27,11 +27,11 @@
     <nav class="fixed w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg z-50 border-b border-gray-200 dark:border-gray-700">
         <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
-                <a href="#hero" class="text-2xl font-bold text-blue-600 dark:text-blue-400">KS</a>
-                <button class="mobile-menu-btn md:hidden" aria-label="Toggle mobile menu">
-                    <i class="fas fa-bars text-gray-600 dark:text-gray-300 text-2xl"></i>
+                <a href="#" class="text-2xl font-bold text-blue-600 dark:text-blue-400">KS</a>
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
                 </button>
-                <div class="nav-links md:flex items-center gap-6">
+                <div id="nav-links" class="hidden md:flex md:items-center md:gap-6">
                     <a href="#about" class="nav-link">About</a>
                     <a href="#experience" class="nav-link">Experience</a>
                     <a href="#projects" class="nav-link">Projects</a>
@@ -45,6 +45,26 @@
                             <i class="fas fa-moon text-blue-300"></i>
                         </span>
                     </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="flex flex-col gap-4 pt-4 pb-3">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#certificates" class="nav-link">Certificates</a>
+                    <div class="flex items-center justify-between px-4 py-2 mt-2 border-t border-gray-200 dark:border-gray-700">
+                        <span class="text-sm text-gray-600 dark:text-gray-300">Theme</span>
+                        <button id="mobile-theme-toggle" class="theme-toggle-btn p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Toggle theme">
+                            <span class="light-theme-icon">
+                                <i class="fas fa-sun text-yellow-500"></i>
+                            </span>
+                            <span class="dark-theme-icon">
+                                <i class="fas fa-moon text-blue-300"></i>
+                            </span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
