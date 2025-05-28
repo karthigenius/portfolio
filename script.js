@@ -52,15 +52,6 @@ const createIntersectionObserver = () => {
     return observer;
 };
 
-// Initialize AOS
-const initAOS = () => {
-    AOS.init({
-        duration: 1000,
-        once: true,
-        mirror: false
-    });
-};
-
 // Theme management
 const ThemeManager = {
     STORAGE_KEY: 'portfolio-theme',
@@ -269,6 +260,34 @@ const updateCopyright = () => {
     }
 };
 
+// Mobile menu functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (mobileMenuBtn && navLinks) {
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (icon) {
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            }
+        });
+
+        // Close menu when clicking a link
+        navLinks.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (icon && icon.classList.contains('fa-times')) {
+                    icon.classList.replace('fa-times', 'fa-bars');
+                }
+            });
+        });
+    }
+});
+
 // Initialize all functions when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     const loading = showLoading();
@@ -282,7 +301,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize features
     ThemeManager.init();
-    initAOS();
     initParticles();
     initSmoothScroll();
     initSkillProgress();
