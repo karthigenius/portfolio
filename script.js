@@ -18,10 +18,21 @@ const createProgressBar = () => {
 };
 
 const updateProgressBar = (progressBar) => {
-    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrolled = (winScroll / height) * 100;
-    progressBar.style.width = `${scrolled}%`;
+    if (!progressBar) return;
+    
+    const windowHeight = window.innerHeight;
+    const documentHeight = Math.max(
+        document.body.scrollHeight,
+        document.body.offsetHeight,
+        document.documentElement.clientHeight,
+        document.documentElement.scrollHeight,
+        document.documentElement.offsetHeight
+    );
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // Calculate scroll percentage
+    const scrollPercentage = (scrollTop / (documentHeight - windowHeight)) * 100;
+    progressBar.style.width = `${Math.min(scrollPercentage, 100)}%`;
 };
 
 // Smooth scroll to section
@@ -50,15 +61,6 @@ const createIntersectionObserver = () => {
     }, options);
 
     return observer;
-};
-
-// Initialize AOS
-const initAOS = () => {
-    AOS.init({
-        duration: 1000,
-        once: true,
-        mirror: false
-    });
 };
 
 // Theme management
@@ -198,7 +200,15 @@ const initSmoothScroll = () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const href = this.getAttribute('href');
+            if (href === '#') {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+                return;
+            }
+            const target = document.querySelector(href);
             if (target) {
                 target.scrollIntoView({
                     behavior: 'smooth',
@@ -214,14 +224,40 @@ const initSkillProgress = () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.width = entry.target.dataset.progress;
+                const progressBar = entry.target;
+                const parentDiv = progressBar.closest('.skill-item');
+                if (!parentDiv) return;
+
+                const percentSpan = parentDiv.querySelector('span:last-child');
+                if (!percentSpan) return;
+
+                // Get the target width
+                const targetWidth = percentSpan.textContent;
+                if (!targetWidth) return;
+
+                // Set initial width to 0
+                progressBar.style.width = '0';
+                // Force reflow
+                progressBar.offsetWidth;
+                // Set the target width to trigger animation
+                progressBar.style.width = targetWidth;
+                observer.unobserve(progressBar);
             }
         });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.2 });
 
+    // Only observe progress bars that exist and have a valid parent
     document.querySelectorAll('.skill-progress').forEach(progress => {
-        progress.style.width = '0';
-        progress.dataset.progress = progress.style.width;
+        const parentDiv = progress.closest('.skill-item');
+        if (!parentDiv) return;
+
+        const percentSpan = parentDiv.querySelector('span:last-child');
+        if (!percentSpan) return;
+
+        const targetWidth = percentSpan.textContent;
+        if (!targetWidth) return;
+
+        progress.style.width = targetWidth;
         observer.observe(progress);
     });
 };
@@ -269,6 +305,36 @@ const updateCopyright = () => {
     }
 };
 
+// Mobile Menu
+const initMobileMenu = () => {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuButton.querySelector('i');
+            if (icon) {
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            }
+        });
+
+        // Close menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileMenuButton.querySelector('i');
+                if (icon) {
+                    icon.classList.add('fa-bars');
+                    icon.classList.remove('fa-times');
+                }
+            });
+        });
+    }
+};
+
 // Initialize all functions when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     const loading = showLoading();
@@ -282,13 +348,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize features
     ThemeManager.init();
-    initAOS();
     initParticles();
     initSmoothScroll();
     initSkillProgress();
     initBackToTop();
     initContactForm();
     updateCopyright();
+    initMobileMenu();
 
     // Add scroll event listener
     window.addEventListener('scroll', () => {
