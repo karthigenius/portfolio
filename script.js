@@ -70,6 +70,7 @@ const ThemeManager = {
     
     init() {
         this.themeToggle = document.getElementById('theme-toggle');
+        this.mobileThemeToggle = document.getElementById('mobile-theme-toggle');
         this.htmlElement = document.documentElement;
         
         // Set initial theme without transition
@@ -78,8 +79,10 @@ const ThemeManager = {
         document.body.offsetHeight; // Force reflow
         document.body.style.transition = '';
         
-        // Add event listeners
-        this.themeToggle.addEventListener('click', () => this.toggleTheme());
+        // Add event listeners for both desktop and mobile toggles
+        const toggleTheme = () => this.toggleTheme();
+        this.themeToggle.addEventListener('click', toggleTheme);
+        this.mobileThemeToggle.addEventListener('click', toggleTheme);
         
         // Handle system theme changes
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
@@ -105,13 +108,15 @@ const ThemeManager = {
         }
         localStorage.setItem(this.STORAGE_KEY, theme);
         
-        // Update button aria-label and icon states
-        this.themeToggle.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`);
-        
-        // Force a repaint to ensure smooth icon transition
-        this.themeToggle.style.display = 'none';
-        this.themeToggle.offsetHeight;
-        this.themeToggle.style.display = '';
+        // Update both desktop and mobile buttons
+        [this.themeToggle, this.mobileThemeToggle].forEach(button => {
+            if (button) {
+                button.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`);
+                button.style.display = 'none';
+                button.offsetHeight;
+                button.style.display = '';
+            }
+        });
     },
     
     toggleTheme() {

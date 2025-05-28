@@ -461,17 +461,41 @@ p, li {
     --text-light: #9ca3af;
     --bg: var(--bg-dark);
     --bg-card: var(--bg-card-dark);
+    background-color: var(--bg-dark);
 }
 
 .dark body {
     background-color: var(--bg-dark);
+    color: var(--text-primary);
 }
 
 .dark .experience-card,
 .dark .project-card,
 .dark .skill-category-card {
     background: var(--bg-card-dark);
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .nav-link {
+    color: var(--text-secondary);
+}
+
+.dark .nav-link:hover {
+    color: var(--accent-blue);
+}
+
+.dark .section-title {
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+.dark .skill-bar {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.dark .skill-progress {
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
 }
 
 .dark .form-input {
@@ -480,28 +504,37 @@ p, li {
     color: var(--text-primary);
 }
 
-.dark .form-label {
-    color: var(--text-primary);
+.dark .form-input:focus {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
 }
 
-.dark .experience-card h3 {
-    color: var(--accent-blue);
+.dark .btn-primary {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
 }
 
-.dark .project-card h3 {
-    color: var(--accent-blue);
+.dark .social-link {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
 }
 
-.dark .skill-category-card h3 {
-    color: var(--accent-blue);
+.dark .experience-list-item::before {
+    color: var(--accent-green);
+    text-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
 }
 
-.dark .contact-link {
-    color: var(--text-primary);
-}
-
-.dark .contact-link:hover {
-    color: var(--accent-blue);
+/* Theme transition improvements */
+body,
+.nav-link,
+.project-card,
+.experience-card,
+.skill-category-card,
+.form-input,
+.btn-primary,
+.btn-secondary,
+.social-link,
+.section-title,
+.skill-progress {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Back to Top Button */
