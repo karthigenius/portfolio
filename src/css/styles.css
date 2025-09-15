@@ -108,11 +108,11 @@ p, li {
     }
 
     #mobile-menu-button:hover {
-        background-color: rgba(243, 244, 246, 0.1);
+        background-color: rgba(0, 0, 0, 0.1);
     }
 
     .dark #mobile-menu-button:hover {
-        background-color: rgba(31, 41, 55, 0.1);
+        background-color: rgba(255, 255, 255, 0.1);
     }
 }
 
@@ -196,9 +196,9 @@ p, li {
     transition: all 0.3s ease;
 }
 
-.btn-primary:hover {
-    background: linear-gradient(135deg, var(--accent-purple), var(--accent-pink));
-    transform: translateY(-2px);
+.btn-primary:hover, .btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .btn-secondary {
@@ -238,6 +238,15 @@ p, li {
     transform: translateY(-3px);
 }
 
+.social-link:hover i {
+    transform: rotate(360deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.hero-social-link {
+    z-index: 30;
+}
+
 /* Scroll Button */
 .scroll-btn {
     display: inline-flex;
@@ -250,6 +259,7 @@ p, li {
     border-radius: 50%;
     transition: all 0.3s ease;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 30;
 }
 
 .scroll-btn:hover {
@@ -269,7 +279,8 @@ p, li {
 }
 
 .stat-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .stat-card h3 {
@@ -289,8 +300,8 @@ p, li {
 }
 
 .experience-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .experience-card h3 {
@@ -305,6 +316,10 @@ p, li {
     position: relative;
     padding-left: 1.5rem;
     color: var(--text-secondary);
+}
+
+.experience-list-item:hover {
+    color: var(--accent-blue);
 }
 
 .experience-list-item::before {
@@ -455,7 +470,7 @@ p, li {
 }
 
 .footer-link:hover {
-    color: white;
+    color: var(--accent-blue);
 }
 
 .footer-social-link {
@@ -473,6 +488,11 @@ p, li {
 .footer-social-link:hover {
     background: rgba(255, 255, 255, 0.2);
     transform: translateY(-2px);
+}
+
+.footer-social-link:hover i {
+    transform: rotate(360deg);
+    transition: transform 0.5s ease-in-out;
 }
 
 /* Animations */
@@ -587,6 +607,11 @@ body,
 #back-to-top.visible {
     opacity: 1;
     visibility: visible;
+}
+
+#back-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive Design */
@@ -751,6 +776,15 @@ a:hover {
 /* Icon styles */
 .theme-toggle-btn i {
     font-size: 1.25rem;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle-btn:hover .light-theme-icon i {
+    transform: rotate(90deg);
+}
+
+.theme-toggle-btn:hover .dark-theme-icon i {
+    transform: rotate(90deg);
 }
 
 .theme-toggle-btn .fa-sun {
@@ -773,12 +807,14 @@ body,
 
 /* Certificate Cards */
 .certificate-card {
+    background: var(--bg-card);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
 
-.certificate-card:hover {
-    transform: translateY(-5px);
-}
+
 
 .certificate-list-item {
     display: flex;
@@ -824,4 +860,26 @@ body,
 
 .certificate-link:hover i {
     transform: translateX(5px);
+}
+
+.project-card .group-hover\:opacity-100 {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.project-card:hover .group-hover\:opacity-100 {
+    opacity: 1;
+}
+
+.project-card img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+.skill-category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }

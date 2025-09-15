@@ -12,14 +12,13 @@
     
     <title>Karthikeyan Surendran - Portfolio</title>
     
-    <link rel="preload" href="styles.css" as="style">
-    <link rel="preload" href="script.js" as="script">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../src/css/styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="../manifest.json">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 </head>
@@ -82,25 +81,19 @@
                 </p>
                 <div class="flex justify-center gap-4 animate-fade-in-delay-2">
                     <a href="https://linkedin.com/in/karthikeyan-surendran" target="_blank" 
-                       class="social-link">
+                       class="social-link hero-social-link">
                         <i class="fab fa-linkedin"></i>
                     </a>
                     <a href="https://github.com/karthigenius" target="_blank" 
-                       class="social-link">
+                       class="social-link hero-social-link">
                         <i class="fab fa-github"></i>
                     </a>
                     <a href="mailto:karthikeyanofficial24@gmail.com" 
-                       class="social-link">
+                       class="social-link hero-social-link">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
-                <div class="mt-12">
-                    <a href="#about" class="scroll-btn">
-                        <span class="animate-bounce block">
-                            <i class="fas fa-chevron-down"></i>
-                        </span>
-                    </a>
-                </div>
+                
             </div>
         </div>
         <div id="particles-js" class="absolute inset-0 z-0"></div>
@@ -109,8 +102,8 @@
     <section id="about" class="py-20">
         <div class="container mx-auto px-4">
             <h2 class="section-title">About Me</h2>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6">
+            <div class="grid md:grid-cols-3 gap-12 items-center">
+                <div class="space-y-6 md:col-span-2">
                     <p class="text-lg text-gray-600 dark:text-gray-300">
                         I'm a passionate Full-Stack Developer and Game Developer with expertise in creating 
                         innovative digital solutions. My journey in technology has led me to work on diverse 
@@ -127,22 +120,22 @@
                 </div>
                 <div class="relative">
                     <div class="aspect-square rounded-2xl bg-gradient-to-br from-blue-500 to-purple-500 p-1">
-                        <div class="rounded-2xl bg-white dark:bg-gray-900 p-6 h-full">
+                        <div class="rounded-2xl bg-white dark:bg-gray-900 p-4 h-full">
                             <div class="grid grid-cols-2 gap-4">
                                 <div class="stat-card">
-                                    <h3 class="text-4xl font-bold text-blue-600 dark:text-blue-400">3+</h3>
+                                    <h3 class="text-3xl font-bold text-blue-600 dark:text-blue-400">3+</h3>
                                     <p>Years Experience</p>
                                 </div>
                                 <div class="stat-card">
-                                    <h3 class="text-4xl font-bold text-purple-600 dark:text-purple-400">20+</h3>
+                                    <h3 class="text-3xl font-bold text-purple-600 dark:text-purple-400">20+</h3>
                                     <p>Projects</p>
                                 </div>
                                 <div class="stat-card">
-                                    <h3 class="text-4xl font-bold text-green-600 dark:text-green-400">15+</h3>
+                                    <h3 class="text-3xl font-bold text-green-600 dark:text-green-400">15+</h3>
                                     <p>Technologies</p>
                                 </div>
                                 <div class="stat-card">
-                                    <h3 class="text-4xl font-bold text-orange-600 dark:text-orange-400">3k+</h3>
+                                    <h3 class="text-3xl font-bold text-orange-600 dark:text-orange-400">3k+</h3>
                                     <p>Users Reached</p>
                                 </div>
                             </div>
@@ -212,7 +205,7 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="project-card group">
                     <div class="relative overflow-hidden rounded-t-xl">
-                        <img src="assets/iam.png" alt="Project 1" class="w-full h-48 object-cover">
+                        <img src="../assets/iam.png" alt="Project 1" class="w-full h-48 object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                             <div class="space-x-2">
                                 <span class="tech-tag">Node.js</span>
@@ -231,7 +224,7 @@
 
                 <div class="project-card group">
                     <div class="relative overflow-hidden rounded-t-xl">
-                        <img src="assets/acrp.png" alt="Project 2" class="w-full h-48 object-cover">
+                        <img src="../assets/acrp.png" alt="Project 2" class="w-full h-48 object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                             <div class="space-x-2">
                                 <span class="tech-tag">C++</span>
@@ -255,7 +248,7 @@
 
                 <div class="project-card group">
                     <div class="relative overflow-hidden rounded-t-xl">
-                        <img src="assets/ddd.png" alt="Project 3" class="w-full h-48 object-cover">
+                        <img src="../assets/ddd.png" alt="Project 3" class="w-full h-48 object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                             <div class="flex flex-wrap gap-2">
                                 <span class="tech-tag">Python</span>
@@ -430,17 +423,10 @@
         <div class="container mx-auto px-4">
             <h2 class="section-title">Certifications</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="project-card group">
+                <div class="certificate-card">
                     <div class="relative overflow-hidden rounded-t-xl">
                         <div class="w-full h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
                             <i class="fab fa-google text-6xl text-blue-500"></i>
-                        </div>
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <div class="space-x-2">
-                                <span class="tech-tag">Data Analytics</span>
-                                <span class="tech-tag">SQL</span>
-                                <span class="tech-tag">R</span>
-                            </div>
                         </div>
                     </div>
                     <div class="p-6">
@@ -458,17 +444,10 @@
                     </div>
                 </div>
 
-                <div class="project-card group">
+                <div class="certificate-card">
                     <div class="relative overflow-hidden rounded-t-xl">
                         <div class="w-full h-48 bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center">
                             <i class="fas fa-code text-6xl text-purple-500"></i>
-                        </div>
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <div class="space-x-2">
-                                <span class="tech-tag">C</span>
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">DSA</span>
-                            </div>
                         </div>
                     </div>
                     <div class="p-6">
@@ -493,24 +472,17 @@
                     </div>
                 </div>
 
-                <div class="project-card group">
+                <div class="certificate-card">
                     <div class="relative overflow-hidden rounded-t-xl">
                         <div class="w-full h-48 bg-gradient-to-br from-green-500/20 to-teal-500/20 flex items-center justify-center">
                             <i class="fas fa-laptop-code text-6xl text-green-500"></i>
-                        </div>
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <div class="space-x-2">
-                                <span class="tech-tag">Frontend</span>
-                                <span class="tech-tag">Backend</span>
-                                <span class="tech-tag">Node.js</span>
-                            </div>
                         </div>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2">Web Development</h3>
                         <ul class="space-y-3 mb-4">
                             <li>
-                                <a href="assets/acmegrade.jpg" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
+                                <a href="../assets/acmegrade.jpg" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
                                     Web Development Complete <i class="fas fa-external-link-alt ml-2"></i>
                                 </a>
                             </li>
@@ -533,16 +505,10 @@
                     </div>
                 </div>
 
-                <div class="project-card group">
+                <div class="certificate-card">
                     <div class="relative overflow-hidden rounded-t-xl">
                         <div class="w-full h-48 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 flex items-center justify-center">
                             <i class="fas fa-mobile-alt text-6xl text-yellow-500"></i>
-                        </div>
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <div class="space-x-2">
-                                <span class="tech-tag">Flutter</span>
-                                <span class="tech-tag">Game Dev</span>
-                            </div>
                         </div>
                     </div>
                     <div class="p-6">
@@ -554,7 +520,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="assets/pfg.pdf" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
+                                <a href="../assets/pfg.pdf" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
                                     Programming for Games <i class="fas fa-external-link-alt ml-2"></i>
                                 </a>
                             </li>
@@ -562,16 +528,10 @@
                     </div>
                 </div>
 
-                <div class="project-card group">
+                <div class="certificate-card">
                     <div class="relative overflow-hidden rounded-t-xl">
                         <div class="w-full h-48 bg-gradient-to-br from-red-500/20 to-pink-500/20 flex items-center justify-center">
                             <i class="fas fa-chart-bar text-6xl text-red-500"></i>
-                        </div>
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <div class="space-x-2">
-                                <span class="tech-tag">Pandas</span>
-                                <span class="tech-tag">Python</span>
-                            </div>
                         </div>
                     </div>
                     <div class="p-6">
@@ -583,7 +543,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="assets/wts.pdf" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
+                                <a href="../assets/wts.pdf" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
                                     Python – Basics <i class="fas fa-external-link-alt ml-2"></i>
                                 </a>
                             </li>
@@ -591,16 +551,10 @@
                     </div>
                 </div>
 
-                <div class="project-card group">
+                <div class="certificate-card">
                     <div class="relative overflow-hidden rounded-t-xl">
                         <div class="w-full h-48 bg-gradient-to-br from-indigo-500/20 to-blue-500/20 flex items-center justify-center">
                             <i class="fas fa-network-wired text-6xl text-indigo-500"></i>
-                        </div>
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <div class="space-x-2">
-                                <span class="tech-tag">Networking</span>
-                                <span class="tech-tag">IT Support</span>
-                            </div>
                         </div>
                     </div>
                     <div class="p-6">
@@ -714,11 +668,11 @@
         </div>
     </footer>
 
-    <button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 transition-opacity duration-300">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+    
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script type="module" src="../src/js/main.js"></script>
 </body>
 </html>
