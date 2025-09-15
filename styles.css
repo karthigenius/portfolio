@@ -278,12 +278,8 @@ p, li {
     transition: transform 0.3s ease;
 }
 
-.stat-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
 .stat-card h3 {
+    margin-top: 0.5rem;
     background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
