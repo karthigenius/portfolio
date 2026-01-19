@@ -1,16 +1,97 @@
+/* Logo and Footer Headings Gradient */
+/* Logo title: gradient for text, solid color for icon */
+.logo-title {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(90deg, #2563eb 30%, #a21caf 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+/* If logo uses an icon, force icon color to white for both themes */
+.logo-title i, .logo-title .fa, .logo-title .fab, .logo-title .fas {
+    color: #fff !important;
+    background: none !important;
+    -webkit-text-fill-color: #fff !important;
+}
+
+/* Ensure logo is visible in dark theme */
+@media (prefers-color-scheme: dark) {
+    .logo-title {
+        background: linear-gradient(90deg, #60a5fa 30%, #c084fc 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+    }
+}
+
+.footer-heading {
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.dark .logo-title, .dark .footer-heading {
+    background: linear-gradient(135deg, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Hero h1 gradient for both themes */
+.hero-title {
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Hero Social Icon Vibrancy in Light Theme */
+/* Hero Social Icon Vibrancy in both themes */
+.hero-social-link {
+    background: linear-gradient(135deg, #2563eb, #a78bfa);
+    color: #fff !important;
+    box-shadow: 0 2px 10px rgba(59, 130, 246, 0.25);
+}
+.hero-social-link:hover {
+    background: linear-gradient(135deg, #a78bfa, #f472b6);
+    color: #fff !important;
+    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.25);
+}
+.hero-social-link i, .hero-social-link .fa, .hero-social-link .fab, .hero-social-link .fas {
+    color: #fff !important;
+}
+.dark .hero-social-link {
+    background: linear-gradient(135deg, #2563eb, #a78bfa);
+    color: #fff !important;
+    box-shadow: 0 2px 10px rgba(59, 130, 246, 0.25);
+}
+.dark .hero-social-link:hover {
+    background: linear-gradient(135deg, #a78bfa, #f472b6);
+    color: #fff !important;
+    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.25);
+}
+.dark .hero-social-link i, .dark .hero-social-link .fa, .dark .hero-social-link .fab, .dark .hero-social-link .fas {
+    color: #fff !important;
+}
 /* Base Styles */
 :root {
     --primary: #4f46e5;
     --primary-dark: #4338ca;
     --secondary: #7c3aed;
     --accent: #f59e0b;
-    --text-primary: #2d3748;
-    --text-secondary: #4a5568;
-    --text-light: #718096;
-    --bg: #f9fafb;
-    --bg-dark: #111827;
-    --bg-card: #ffffff;
-    --bg-card-dark: #1f2937;
+    --bg-card: #f8fafc;
+    --bg-card-dark: #23263a;
+    --text-primary: #23263a;
+    --text-secondary: #4b5563;
+    --text-light: #94a3b8;
+    --bg: #f8fafc;
+    --bg-dark: #181a23;
     
     /* Colorful text accents */
     --accent-blue: #3b82f6;
@@ -48,8 +129,9 @@ p, li {
 }
 
 /* Navigation */
+
 .nav-link {
-    color: rgb(75, 85, 99);
+    color: var(--accent-blue);
     transition: color 0.3s;
     position: relative;
 }
@@ -70,7 +152,7 @@ p, li {
 }
 
 .dark .nav-link {
-    color: rgb(209, 213, 219);
+    color: #e5e7eb !important;
 }
 
 .nav-link:hover {
@@ -166,11 +248,18 @@ p, li {
     display: inline-block;
     left: 50%;
     transform: translateX(-50%);
-    color: var(--text-accent);
+    color: var(--accent-blue);
     background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+.dark .section-title {
+    color: #fff !important;
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    -webkit-text-fill-color: initial !important;
+    background-clip: initial !important;
 }
 
 .section-title::after {
@@ -268,9 +357,6 @@ p, li {
     color: white;
 }
 
-    background-clip: text;
-}
-
 /* Experience Cards */
 .experience-card {
     background: var(--bg-card);
@@ -278,6 +364,30 @@ p, li {
     padding: 2rem;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+}
+
+.dark .experience-card h1,
+.dark .experience-card h2,
+.dark .experience-card h3,
+.dark .experience-card h4,
+.dark .experience-card h5,
+.dark .experience-card h6,
+.dark .project-card h1,
+.dark .project-card h2,
+.dark .project-card h3,
+.dark .project-card h4,
+.dark .project-card h5,
+.dark .project-card h6,
+.dark .skill-category-card h1,
+.dark .skill-category-card h2,
+.dark .skill-category-card h3,
+.dark .skill-category-card h4,
+.dark .skill-category-card h5,
+.dark .skill-category-card h6 {
+    color: #fff !important;
+}
+.dark .experience-card p {
+    color: #d1d5db !important;
 }
 
 .experience-card:hover {
@@ -314,9 +424,14 @@ p, li {
 .project-card {
     background: var(--bg-card);
     border-radius: 1rem;
-    overflow: hidden;
+    padding: 2rem;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+}
+
+.dark .project-card {
+    background: var(--bg-card-dark) !important;
+    overflow: hidden;
 }
 
 .project-card:hover {
@@ -372,6 +487,10 @@ p, li {
     transition: all 0.3s ease;
 }
 
+.dark .skill-category-card {
+    background: var(--bg-card-dark) !important;
+}
+
 .skill-category-card h3 {
     color: var(--accent-blue);
     margin-bottom: 1.5rem;
@@ -410,9 +529,58 @@ p, li {
 /* Contact Form */
 .form-label {
     display: block;
-    color: var(--text-primary);
+    color: var(--accent-blue);
     font-weight: 500;
     margin-bottom: 0.5rem;
+}
+
+/* Headings: h1, h3, etc. */
+/* Remove color from global heading rules to prevent override of gradients */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary);
+}
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    color: #fff !important;
+}
+
+/* Hero h1 gradient for both themes */
+.hero h1, h1.hero-title, .section-title.hero-title, .hero-title {
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+.dark .hero h1, .dark h1.hero-title, .dark .section-title.hero-title, .dark .hero-title {
+    background: linear-gradient(135deg, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Footer and hero social/contact links: visible in both themes */
+/* Footer and contact links: always visible */
+.footer-social-link, .contact-link {
+    color: var(--accent-blue) !important;
+    transition: color 0.3s;
+}
+.footer-social-link:hover, .contact-link:hover {
+    color: var(--accent-purple) !important;
+}
+.dark .footer-social-link, .dark .contact-link {
+    color: #e5e7eb !important;
+}
+.footer-social-link i, .footer-social-link .fa, .footer-social-link .fab, .footer-social-link .fas {
+    color: #fff !important;
+}
+.dark .footer-social-link i, .dark .footer-social-link .fa, .dark .footer-social-link .fab, .dark .footer-social-link .fas {
+    color: #fff !important;
+}
+
+/* Form label color in dark mode */
+.dark label.form-label {
+    color: #fff !important;
 }
 
 .form-input {
@@ -423,6 +591,19 @@ p, li {
     background: var(--bg-card);
     color: var(--text-primary);
     transition: all 0.3s ease;
+}
+.form-input::placeholder {
+    color: var(--text-light);
+    opacity: 1;
+}
+.dark .form-input {
+    background: var(--bg-card-dark);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+.dark .form-input::placeholder {
+    color: #9ca3af;
+    opacity: 1;
 }
 
 .form-input:focus {
@@ -515,7 +696,7 @@ p, li {
 .dark .skill-category-card {
     background: var(--bg-card-dark);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .dark .nav-link {

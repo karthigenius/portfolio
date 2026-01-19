@@ -37,11 +37,12 @@ const ThemeManager = {
     setTheme(theme) {
         if (theme === 'dark') {
             this.htmlElement.classList.add(this.DARK_CLASS);
+            this.htmlElement.setAttribute('data-theme', 'dark');
         } else {
             this.htmlElement.classList.remove(this.DARK_CLASS);
+            this.htmlElement.setAttribute('data-theme', 'light');
         }
         localStorage.setItem(this.STORAGE_KEY, theme);
-        
         // Update both desktop and mobile buttons
         [this.themeToggle, this.mobileThemeToggle].forEach(button => {
             if (button) {
