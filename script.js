@@ -111,7 +111,6 @@ const initAnimations = () => {
     gsap.from('#about p', { duration: 1, y: 50, opacity: 0, ease: 'power3.out', stagger: 0.2, scrollTrigger: { trigger: '#about', start: 'top 60%' } });
     gsap.from('#about .btn-primary', { duration: 1, y: 50, opacity: 0, ease: 'power3.out', delay: 0.5, scrollTrigger: { trigger: '#about', start: 'top 60%' } });
     gsap.from('#about .btn-secondary', { duration: 1, y: 50, opacity: 0, ease: 'power3.out', delay: 0.7, scrollTrigger: { trigger: '#about', start: 'top 60%' } });
-    gsap.from('#about .stat-card', { duration: 1, y: 50, opacity: 0, ease: 'power3.out', stagger: 0.2, scrollTrigger: { trigger: '#about .stat-card', start: 'top 80%' } });
 
     // Experience Section Animation
     gsap.utils.toArray('.experience-card').forEach(card => {
