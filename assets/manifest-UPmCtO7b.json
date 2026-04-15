@@ -1,0 +1,9 @@
+{
+    "name": "Karthikeyan Surendran Portfolio",
+    "short_name": "KS Portfolio",
+    "description": "Full-Stack Developer, Game Scripter, and Data Analyst Portfolio",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#2563eb"
+} 
