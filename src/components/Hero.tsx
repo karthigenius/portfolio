@@ -5,12 +5,14 @@ import { motion } from "framer-motion";
 import { Mail, ArrowRight } from "lucide-react";
 
 interface Bubble {
+  id: number;
   width: number;
   height: number;
   left: number;
   top: number;
   duration: number;
   xDrift: number;
+  isPopping?: boolean;
 }
 
 export default function Hero() {
@@ -19,19 +21,49 @@ export default function Hero() {
 
   useEffect(() => {
     // Generate 6 beautiful soap bubbles distributed across the Hero container
-    const generatedBubbles = [...Array(6)].map(() => {
+    const generatedBubbles = [...Array(6)].map((_, idx) => {
       const size = Math.random() * 65 + 35; // 35px to 100px (ensuring a perfect circle)
       return {
+        id: idx,
         width: size,
         height: size,
         left: Math.random() * 90,
         top: Math.random() * 80 + 10,
         duration: Math.random() * 8 + 8,
         xDrift: Math.random() * 30 - 15,
+        isPopping: false,
       };
     });
     setBubbles(generatedBubbles);
   }, []);
+
+  const popBubble = (id: number) => {
+    setBubbles((prev) =>
+      prev.map((b) => (b.id === id ? { ...b, isPopping: true } : b))
+    );
+
+    // Play a gentle pop animation, then replace it with a new one after 400ms
+    setTimeout(() => {
+      setBubbles((prev) =>
+        prev.map((b) => {
+          if (b.id === id) {
+            const size = Math.random() * 65 + 35;
+            return {
+              id: Math.random(), // new unique ID
+              width: size,
+              height: size,
+              left: Math.random() * 90,
+              top: Math.random() * 80 + 10,
+              duration: Math.random() * 8 + 8,
+              xDrift: Math.random() * 30 - 15,
+              isPopping: false,
+            };
+          }
+          return b;
+        })
+      );
+    }, 400);
+  };
 
   const handleMouseMove = (e: React.MouseEvent) => {
     const { clientX, clientY, currentTarget } = e;
@@ -158,10 +190,11 @@ export default function Hero() {
 
       {/* Floating Animated Soap Bubbles - Scoped strictly to Hero */}
       <div className="absolute inset-0 pointer-events-none z-0">
-        {bubbles.map((bubble, i) => (
+        {bubbles.map((bubble) => (
           <motion.div
-            key={i}
-            className="absolute rounded-full"
+            key={bubble.id}
+            onClick={() => popBubble(bubble.id)}
+            className="absolute rounded-full pointer-events-auto cursor-pointer"
             style={{
               width: bubble.width,
               height: bubble.height,
@@ -173,11 +206,23 @@ export default function Hero() {
               boxShadow: "inset -4px -4px 10px rgba(99, 102, 241, 0.25), inset 4px 4px 10px rgba(255, 255, 255, 0.45), 0 4px 12px rgba(14, 165, 233, 0.1)",
               backdropFilter: "blur-[1.5px]",
             }}
-            animate={{
+            whileHover={bubble.isPopping ? {} : {
+              scale: 1.15,
+              filter: "brightness(1.1)",
+              transition: { duration: 0.2 }
+            }}
+            animate={bubble.isPopping ? {
+              scale: 1.6,
+              opacity: 0,
+              filter: "blur(4px)"
+            } : {
               y: [0, -45, 0],
               x: [0, bubble.xDrift, 0],
             }}
-            transition={{
+            transition={bubble.isPopping ? {
+              duration: 0.3,
+              ease: "easeOut"
+            } : {
               duration: bubble.duration,
               repeat: Infinity,
               ease: "easeInOut",

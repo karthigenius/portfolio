@@ -3,12 +3,19 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "@/app/providers";
 import { Sun, Moon, Menu, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const { theme, setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
 
   useEffect(() => {
     setMounted(true);
@@ -104,6 +111,12 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
+      
+      {/* Scroll Progress Bar */}
+      <motion.div
+        className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 origin-left z-50"
+        style={{ scaleX }}
+      />
     </header>
   );
 }
