@@ -29,7 +29,6 @@ This repository showcases my professional experience, skills, projects, certific
 ## 📁 Repository Structure
 
 ```text
-├── .github/workflows/   # CI/CD deployment configurations (e.g., GitHub Pages)
 ├── public/              # Static assets (images, icons, resumes)
 ├── src/
 │   ├── app/             # Next.js App Router (layout, global styles, providers)
