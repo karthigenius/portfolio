@@ -112,7 +112,7 @@ export default function Experience() {
           </div>
 
           {/* Professional Training */}
-          <div className="space-y-8">
+          <div id="training" className="space-y-8 scroll-mt-24">
             <div className="flex items-center gap-3 mb-6">
               <GraduationCap className="text-indigo-500" size={26} />
               <h3 className="text-2xl font-bold text-slate-800 dark:text-white">Training</h3>
