@@ -96,8 +96,8 @@ export default function Experience() {
                   {/* Timeline bullet dot */}
                   <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-slate-900 border-2 border-sky-500" />
                   
-                  <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 shadow-sm hover:shadow-md hover:border-slate-300 dark:hover:border-slate-700 transition-all duration-300">
-                    <span className="text-xs font-semibold text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/40 px-2.5 py-1 rounded-full">{exp.period}</span>
+                  <div className="backdrop-blur-md bg-white/30 dark:bg-slate-900/35 p-6 rounded-2xl border border-white/20 dark:border-slate-800/40 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <span className="text-xs font-semibold text-sky-650 dark:text-sky-400 bg-sky-100/40 dark:bg-sky-950/30 px-2.5 py-1 rounded-full">{exp.period}</span>
                     <h4 className="text-xl font-bold text-slate-850 dark:text-white mt-3">{exp.title}</h4>
                     <p className="text-sm font-semibold text-slate-500 dark:text-slate-400 mb-4">{exp.company}</p>
                     <ul className="list-disc list-outside ml-4 space-y-2 text-slate-650 dark:text-slate-300 text-sm">
@@ -126,9 +126,9 @@ export default function Experience() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 shadow-sm hover:shadow-md transition-all duration-300"
+                  className="backdrop-blur-md bg-white/30 dark:bg-slate-900/35 p-6 rounded-2xl border border-white/20 dark:border-slate-800/40 shadow-lg hover:shadow-xl transition-all duration-300"
                 >
-                  <span className="text-xs font-semibold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/40 px-2.5 py-1 rounded-full">{train.period}</span>
+                  <span className="text-xs font-semibold text-indigo-650 dark:text-indigo-400 bg-indigo-100/40 dark:bg-indigo-950/30 px-2.5 py-1 rounded-full">{train.period}</span>
                   <h4 className="text-lg font-bold text-slate-850 dark:text-white mt-3">{train.title}</h4>
                   <p className="text-sm font-semibold text-slate-500 dark:text-slate-400 mb-4">{train.institution}</p>
                   <p className="text-slate-650 dark:text-slate-300 text-sm leading-relaxed">{train.bullets[0]}</p>

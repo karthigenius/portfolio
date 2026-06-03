@@ -95,7 +95,7 @@ export default function Certificates() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200/50 dark:border-slate-800/50 shadow-sm flex flex-col justify-between"
+              className="p-6 rounded-2xl backdrop-blur-md bg-white/30 dark:bg-slate-900/35 border border-white/20 dark:border-slate-800/40 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
             >
               <div>
                 {/* Header */}
