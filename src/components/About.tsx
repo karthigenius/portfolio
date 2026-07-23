@@ -63,10 +63,10 @@ export default function About() {
               AI-Augmented Developer focused on Impactful Software
             </h3>
             <p className="text-lg leading-relaxed">
-              I am an AI-augmented Full Stack Developer with hands-on experience building web applications, cloud deployments, and AI-powered automation using LLM APIs. I specialize in bridging the gap between intelligent AI models and reliable application software.
+              Software Developer with hands-on experience in designing and developing web applications, backend systems, REST APIs, cloud deployments, and automation solutions. Proficient in Java, Python, JavaScript, React, Node.js, SQL, Docker, and cloud technologies, with experience integrating AI and LLM APIs into modern applications.
             </p>
             <p className="text-lg leading-relaxed">
-              Notable achievements include building custom multiplayer server infrastructure supporting a community of over 3,000+ members, featuring automation, chat moderation, and analytics. Whether it's crafting scalable Java backends, fine-tuning RAG systems with ChromaDB, or scaling deployments on Docker, I build with efficiency and performance in mind.
+              I also bring practical experience in community management and operations, including overseeing a Discord server for a SAMP Server with 3000+ members, supporting moderation, engagement, and community coordination at scale. Whether it's crafting scalable Java backends, fine-tuning RAG systems with ChromaDB, or scaling deployments on Docker, I build with efficiency and performance in mind.
             </p>
           </motion.div>
 
