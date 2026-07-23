@@ -13,6 +13,13 @@ export const metadata: Metadata = {
   description: "AI-augmented Full Stack Developer with hands-on experience building web applications, cloud deployments, and AI-powered automation.",
   keywords: ["Karthikeyan Surendran", "AI Developer", "Full Stack Developer", "Cloud Developer", "LLM", "RAG", "AWS", "GCP", "Portfolio"],
   authors: [{ name: "Karthikeyan Surendran" }],
+  icons: [
+    { rel: "icon", url: "/favicon.ico" },
+    { rel: "icon", type: "image/png", sizes: "32x32", url: "/favicon-32x32.png" },
+    { rel: "icon", type: "image/png", sizes: "16x16", url: "/favicon-16x16.png" },
+    { rel: "apple-touch-icon", url: "/apple-touch-icon.png" },
+    { rel: "manifest", url: "/site.webmanifest" },
+  ],
   openGraph: {
     title: "Karthikeyan Surendran | Portfolio",
     description: "AI-Augmented Full Stack & Cloud Developer Portfolio",

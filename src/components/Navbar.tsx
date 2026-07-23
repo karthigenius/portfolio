@@ -36,8 +36,8 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="#" className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-indigo-500 hover:from-sky-500 hover:to-indigo-600 transition-colors">
-              KS
+            <a href="#" className="flex items-center gap-3 text-2xl font-bold text-slate-900 dark:text-slate-50 transition-colors">
+              <img src="/android-chrome-192x192.png" alt="KS logo" className="h-10 w-10 rounded-md object-cover" />
             </a>
           </div>
 
