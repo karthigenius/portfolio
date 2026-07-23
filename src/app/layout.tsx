@@ -9,9 +9,9 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Karthikeyan Surendran | AI-Augmented Full Stack & Cloud Developer",
-  description: "AI-augmented Full Stack Developer with hands-on experience building web applications, cloud deployments, and AI-powered automation.",
-  keywords: ["Karthikeyan Surendran", "AI Developer", "Full Stack Developer", "Cloud Developer", "LLM", "RAG", "AWS", "GCP", "Portfolio"],
+  title: "Karthikeyan Surendran | Software Developer",
+  description: "Software Developer with hands-on experience building web applications, cloud deployments, and AI-powered automation.",
+  keywords: ["Karthikeyan Surendran", "Software Developer", "Full Stack Developer", "Cloud Developer", "LLM", "RAG", "AWS", "GCP", "Portfolio"],
   authors: [{ name: "Karthikeyan Surendran" }],
   icons: [
     { rel: "icon", url: "/favicon.ico" },
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
     { rel: "manifest", url: "/site.webmanifest" },
   ],
   openGraph: {
-    title: "Karthikeyan Surendran | Portfolio",
-    description: "AI-Augmented Full Stack & Cloud Developer Portfolio",
+    title: "Karthikeyan Surendran | Software Developer",
+    description: "Software Developer Portfolio",
     type: "website",
   },
 };

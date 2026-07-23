@@ -6,12 +6,12 @@ import { Briefcase, GraduationCap } from "lucide-react";
 export default function Experience() {
   const experiences = [
     {
-      title: "AI-Integrated Full Stack Developer",
+      title: "Software Developer",
       company: "SpaceShield – Freelance, Remote",
       period: "Apr 2025 – Apr 2026",
       type: "work",
       bullets: [
-        "Built an AI-assisted moderation workflow using LLM APIs to detect rule violations, reducing manual moderation overhead in a 3,000+ member Discord community.",
+        "Designed and developed full-stack web applications using JavaScript, Node.js, React, MySQL, and PostgreSQL.",
         "Developed REST APIs and backend integrations for automated, real-time responses.",
         "Implemented a RAG FAQ bot using Node.js and ChromaDB to streamline information discovery.",
         "Containerized applications using Docker and hosted services across AWS and GCP environments.",

@@ -128,7 +128,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mt-6 max-w-2xl mx-auto text-lg md:text-2xl text-slate-650 dark:text-slate-400 font-medium"
         >
-          AI-Augmented Full Stack &amp; Cloud Developer
+          Software Developer
         </motion.p>
 
         {/* Buttons */}

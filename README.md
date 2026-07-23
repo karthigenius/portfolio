@@ -1,8 +1,15 @@
-# Karthikeyan's Personal Portfolio
+# Portfolio Repository
 
-A sleek, responsive, and modern personal portfolio website built using Next.js 16 (App Router), React 19, Tailwind CSS v4, and Framer Motion.
+This repository contains a modern portfolio website focused on showcasing the technical skills of the GitHub profile owner rather than personal biography.
 
-This repository showcases my professional experience, skills, projects, certifications, and provides an easy way to get in touch.
+## 🧠 Skills Highlighted
+
+- **Full Stack Development:** React, Next.js, TypeScript, and modern UI development
+- **Backend & APIs:** RESTful services, integration logic, and scalable application architecture
+- **Cloud & Deployment:** AWS, GCP, Docker, and cloud-hosted application workflows
+- **AI & Automation:** LLM API integrations, RAG-based solutions, and intelligent automation
+- **Databases:** MySQL and PostgreSQL for structured data storage and analytics
+- **Developer Workflow:** Git, GitHub, responsive design, debugging, and deployment practices
 
 ## 🚀 Tech Stack
 
@@ -14,34 +21,31 @@ This repository showcases my professional experience, skills, projects, certific
 - **Theme Management:** [next-themes](https://github.com/pacocoursey/next-themes)
 - **Language:** [TypeScript](https://www.typescriptlang.org/)
 
-## ✨ Features
+## ✨ Portfolio Features
 
-- **Dynamic Hero Section:** Immersive entry point with professional tagline and call-to-actions.
-- **About Me:** Brief professional summary and personal details.
-- **Skills Showcase:** Categories of technical proficiencies with modern visual indicators.
-- **Professional Experience:** Interactive chronological timeline detailing previous roles.
-- **Projects Section:** Grid of featured projects with details, tech stack badges, and links.
-- **Certificates:** Showcase of achieved industry credentials and certifications.
-- **Contact Form:** Clean and responsive form to send messages directly.
-- **Dark & Light Mode:** Seamless theme toggling supported natively.
-- **Fluid Animations:** Smooth scroll transitions and micro-interactions powered by Framer Motion.
+- **Responsive Design:** Clean, modern layout for desktop and mobile screens
+- **Animated Sections:** Smooth transitions and interactive UI elements
+- **Skills Showcase:** Highlights core technical capabilities and toolsets
+- **Project & Experience Sections:** Displays work history and featured implementations
+- **Contact Section:** Easy way to connect and reach out
+- **Dark & Light Mode:** Seamless theme switching
 
 ## 📁 Repository Structure
 
 ```text
-├── public/              # Static assets (images, icons, resumes)
+├── public/              # Static assets and site resources
 ├── src/
-│   ├── app/             # Next.js App Router (layout, global styles, providers)
-│   └── components/      # UI components (Hero, About, Projects, Contact, etc.)
-├── package.json         # Project dependencies and script runner configurations
-└── tsconfig.json        # TypeScript configuration settings
+│   ├── app/             # Next.js App Router structure and theme setup
+│   └── components/      # UI sections such as Hero, About, Projects, and Contact
+├── package.json         # Project dependencies and scripts
+└── tsconfig.json        # TypeScript configuration
 ```
 
 ## 🛠️ Getting Started
 
 ### Prerequisites
 
-Make sure you have Node.js (version 18 or above recommended) installed on your system.
+Make sure Node.js (version 18 or above recommended) is installed.
 
 ### Installation
 
@@ -61,17 +65,15 @@ Make sure you have Node.js (version 18 or above recommended) installed on your s
    npm run dev
    ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser to view the portfolio.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## 📦 Building for Production
-
-To create an optimized production build of the website:
+## 📦 Build for Production
 
 ```bash
 npm run build
 ```
 
-The output will be generated inside the `.next` directory, ready to be deployed.
+The production build will be generated in the `.next` directory.
 
 ## 📄 License
 
