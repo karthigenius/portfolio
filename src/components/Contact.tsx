@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Copy, Check, Send } from "lucide-react";
+import { Mail, Copy, Check, Send, MapPin } from "lucide-react";
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
@@ -45,21 +45,33 @@ export default function Contact() {
           <div className="grid md:grid-cols-5 gap-8 items-center">
             {/* Left side info */}
             <div className="md:col-span-2 space-y-6">
-              <h3 className="text-2xl font-bold text-slate-800 dark:text-white">Let's talk about your next project!</h3>
+              <h3 className="text-2xl font-bold text-slate-800 dark:text-white">Let's connect!</h3>
               <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                Whether you want to build an AI agent workflow, cloud application, database-driven backend, or multiplayer game logic, I am ready to collaborate.
+                I'm actively interested in application support roles, incident management, and cloud operations—particularly around financial and trading systems. Feel free to reach out via email or connect on LinkedIn.
               </p>
 
-              <div className="space-y-4 pt-4">
+              <div className="space-y-4 pt-2">
                 <div className="flex items-center gap-3">
                   <div className="p-2.5 rounded-xl bg-sky-50 dark:bg-sky-950/30 text-sky-600 dark:text-sky-400">
-                    <Mail size={20} />
+                    <Mail size={18} />
                   </div>
                   <div>
                     <p className="text-xs text-slate-400 dark:text-slate-500 font-semibold">Email Address</p>
-                    <a href={`mailto:${email}`} className="text-sm font-bold text-slate-750 dark:text-slate-300 hover:text-sky-500 transition-colors">
+                    <a href={`mailto:${email}`} className="text-sm font-bold text-slate-750 dark:text-slate-300 hover:text-sky-500 transition-colors break-all">
                       {email}
                     </a>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <div className="p-2.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400">
+                    <MapPin size={18} />
+                  </div>
+                  <div>
+                    <p className="text-xs text-slate-400 dark:text-slate-500 font-semibold">Location</p>
+                    <p className="text-sm font-bold text-slate-750 dark:text-slate-300">
+                      Chennai, Tamil Nadu, India
+                    </p>
                   </div>
                 </div>
               </div>
@@ -67,7 +79,7 @@ export default function Contact() {
               {/* Direct copy */}
               <button
                 onClick={handleCopy}
-                className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 text-sm font-bold text-slate-700 dark:text-slate-300 transition-all"
+                className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 text-sm font-bold text-slate-700 dark:text-slate-300 transition-all cursor-pointer"
               >
                 {copied ? (
                   <>
@@ -87,7 +99,7 @@ export default function Contact() {
             <div className="md:col-span-3 space-y-4">
               <div className="p-6 rounded-2xl bg-slate-50/50 dark:bg-slate-950/40 border border-slate-200/50 dark:border-slate-800/50 flex items-center justify-between group">
                 <div>
-                  <h4 className="font-bold text-slate-800 dark:text-white">Professional Profile</h4>
+                  <h4 className="font-bold text-slate-800 dark:text-white">LinkedIn Profile</h4>
                   <p className="text-xs text-slate-500">Connect and message on LinkedIn</p>
                 </div>
                 <a
@@ -95,6 +107,7 @@ export default function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-650 hover:text-sky-500 hover:border-sky-500 dark:text-slate-400 dark:hover:text-sky-400 dark:hover:border-sky-500 transition-all flex items-center justify-center group-hover:scale-105 w-11 h-11"
+                  aria-label="LinkedIn Profile"
                 >
                   <i className="fab fa-linkedin text-xl"></i>
                 </a>
@@ -102,14 +115,15 @@ export default function Contact() {
 
               <div className="p-6 rounded-2xl bg-slate-50/50 dark:bg-slate-950/40 border border-slate-200/50 dark:border-slate-800/50 flex items-center justify-between group">
                 <div>
-                  <h4 className="font-bold text-slate-800 dark:text-white">Source Repositories</h4>
-                  <p className="text-xs text-slate-500">Explore open source codes &amp; projects</p>
+                  <h4 className="font-bold text-slate-800 dark:text-white">GitHub Repositories</h4>
+                  <p className="text-xs text-slate-500">Explore scripts, tools &amp; projects</p>
                 </div>
                 <a
                   href="https://github.com/karthigenius"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-650 hover:text-sky-500 hover:border-sky-500 dark:text-slate-400 dark:hover:text-sky-400 dark:hover:border-sky-500 transition-all flex items-center justify-center group-hover:scale-105 w-11 h-11"
+                  aria-label="GitHub Profile"
                 >
                   <i className="fab fa-github text-xl"></i>
                 </a>
@@ -117,14 +131,15 @@ export default function Contact() {
 
               <div className="p-6 rounded-2xl bg-slate-50/50 dark:bg-slate-950/40 border border-slate-200/50 dark:border-slate-800/50 flex items-center justify-between group">
                 <div>
-                  <h4 className="font-bold text-slate-800 dark:text-white">Direct Message</h4>
-                  <p className="text-xs text-slate-500">Send an instant email from your mail client</p>
+                  <h4 className="font-bold text-slate-800 dark:text-white">Direct Email</h4>
+                  <p className="text-xs text-slate-500">Send an email straight to my inbox</p>
                 </div>
                 <a
                   href={`mailto:${email}`}
-                  className="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-650 hover:text-sky-500 hover:border-sky-500 dark:text-slate-400 dark:hover:text-sky-400 dark:hover:border-sky-500 transition-all flex items-center justify-center group-hover:scale-105"
+                  className="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-650 hover:text-sky-500 hover:border-sky-500 dark:text-slate-400 dark:hover:text-sky-400 dark:hover:border-sky-500 transition-all flex items-center justify-center group-hover:scale-105 w-11 h-11"
+                  aria-label="Direct Email"
                 >
-                  <Send size={20} />
+                  <Send size={18} />
                 </a>
               </div>
             </div>

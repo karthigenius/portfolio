@@ -126,9 +126,18 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-6 max-w-2xl mx-auto text-lg md:text-2xl text-slate-650 dark:text-slate-400 font-medium"
+          className="mt-6 max-w-2xl mx-auto text-xl md:text-2xl text-slate-800 dark:text-slate-200 font-semibold tracking-wide"
         >
-          Software Developer
+          Application Support Engineer
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="mt-3 max-w-2xl mx-auto text-sm md:text-base text-slate-600 dark:text-slate-400 leading-relaxed font-normal"
+        >
+          Hands-on with Linux environments, SQL troubleshooting, REST APIs, and cloud infrastructure. Focused on quick incident resolution, root cause analysis, and keeping production systems reliable.
         </motion.p>
 
         {/* Buttons */}

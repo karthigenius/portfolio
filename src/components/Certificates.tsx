@@ -6,59 +6,59 @@ import { Award, ExternalLink, GraduationCap, ChevronRight } from "lucide-react";
 export default function Certificates() {
   const certifications = [
     {
+      title: "IT Support & Networking",
+      issuer: "Google / Coursera",
+      desc: "Google IT credentials covering network protocols (TCP/IP, DNS, subnetting), OS administration, and customer-facing support fundamentals.",
+      links: [
+        { name: "Technical Support Fundamentals", url: "https://www.coursera.org/account/accomplishments/certificate/Z3GWHWK3XFVP" },
+        { name: "Computer Networking", url: "https://www.coursera.org/account/accomplishments/certificate/FYMCNBTAEUM2" }
+      ]
+    },
+    {
       title: "Google Data Analytics",
       issuer: "Coursera / Google",
-      desc: "Comprehensive specialization covering data analytics tools, R, SQL, and Tableau.",
+      desc: "Comprehensive professional program covering data processing, SQL querying, data cleaning, analysis, and visualization.",
       links: [
-        { name: "View Specialization", url: "https://www.coursera.org/account/accomplishments/specialization/LTC2VE3IVH3Y" }
+        { name: "View Professional Certificate", url: "https://www.coursera.org/account/accomplishments/specialization/LTC2VE3IVH3Y" }
       ]
     },
     {
-      title: "Programming Languages",
-      issuer: "GUVI & Coursera",
-      desc: "Core credentials in algorithms and language structures.",
+      title: "Python & Data Structures",
+      issuer: "Coursera & GUVI",
+      desc: "Coursework covering Python fundamentals, core data structures, problem-solving, and procedural programming in C.",
       links: [
-        { name: "C Programming", url: "https://www.guvi.in/share-certificate/71s3q837n78Z87Pi5b" },
         { name: "Python Programming", url: "https://www.coursera.org/account/accomplishments/certificate/2QNUATCNRTCA" },
-        { name: "Python Data Structures", url: "https://www.coursera.org/account/accomplishments/certificate/9DUPXHYDWSR4" }
+        { name: "Python Data Structures", url: "https://www.coursera.org/account/accomplishments/certificate/9DUPXHYDWSR4" },
+        { name: "C Programming", url: "https://www.guvi.in/share-certificate/71s3q837n78Z87Pi5b" }
       ]
     },
     {
-      title: "Web Development",
-      issuer: "Acmegrade & Coursera",
-      desc: "Full-stack credentials covering both client-side design and servers.",
+      title: "Web & Backend Development",
+      issuer: "GUVI & Coursera",
+      desc: "Practical credentials covering backend APIs, Node.js server development, and full-stack web essentials.",
       links: [
-        { name: "Web Development Complete", url: "/assets/acmegrade.jpg" },
+        { name: "Node.js Certification", url: "https://www.guvi.in/share-certificate/76A48c4Gpv71a37JT8" },
         { name: "Back-End Development", url: "https://www.coursera.org/account/accomplishments/records/VU9KN8TTQ8AE" },
         { name: "Front-End Development", url: "https://www.coursera.org/account/accomplishments/records/XSRYN97YHTEK" },
-        { name: "Node.js", url: "https://www.guvi.in/share-certificate/76A48c4Gpv71a37JT8" }
+        { name: "Web Development Complete", url: "/assets/acmegrade.jpg" }
       ]
     },
     {
-      title: "Mobile & Game Dev",
-      issuer: "GUVI & University of Colorado",
-      desc: "Cross-platform application and game script mechanics.",
-      links: [
-        { name: "Flutter Development", url: "https://www.guvi.in/share-certificate/yl5i7Y17g6Tn562p37" },
-        { name: "Programming for Games", url: "/assets/pfg.pdf" }
-      ]
-    },
-    {
-      title: "Data Analytics & Pandas",
+      title: "Data Analytics with Pandas",
       issuer: "GUVI & MedTourEasy",
-      desc: "Specialized analysis in Python Pandas and healthcare modeling.",
+      desc: "Applied data analysis and table manipulation in Python using the Pandas library.",
       links: [
         { name: "Data Analytics Using Pandas", url: "https://www.guvi.in/share-certificate/8uX80S13L350713793" },
         { name: "Python – Basics", url: "/assets/wts.pdf" }
       ]
     },
     {
-      title: "IT Fundamentals",
-      issuer: "Google / Coursera",
-      desc: "Fundamentals of networking protocols and infrastructure support.",
+      title: "Mobile & Application Scripting",
+      issuer: "GUVI & University of Colorado",
+      desc: "Practical application building and logic scripting mechanics.",
       links: [
-        { name: "Computer Networking", url: "https://www.coursera.org/account/accomplishments/certificate/FYMCNBTAEUM2" },
-        { name: "Technical Support Fundamentals", url: "https://www.coursera.org/account/accomplishments/certificate/Z3GWHWK3XFVP" }
+        { name: "Flutter Development", url: "https://www.guvi.in/share-certificate/yl5i7Y17g6Tn562p37" },
+        { name: "Programming for Games", url: "/assets/pfg.pdf" }
       ]
     }
   ];

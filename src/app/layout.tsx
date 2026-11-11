@@ -10,9 +10,9 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Karthikeyan Surendran | Software Developer",
-  description: "Software Developer with hands-on experience in designing and developing web applications, backend systems, REST APIs, cloud deployments, and automation solutions. Proficient in Java, Python, JavaScript, React, Node.js, SQL, Docker, and cloud technologies, with experience integrating AI and LLM APIs into modern applications and managing a 3000+ member Discord server for a SAMP Server.",
-  keywords: ["Karthikeyan Surendran", "Software Developer", "Full Stack Developer", "Cloud Developer", "LLM", "RAG", "AWS", "GCP", "Portfolio"],
+  title: "Karthikeyan Surendran | Application Support Engineer",
+  description: "Application Support Engineer with hands-on experience in Linux systems, SQL querying, REST APIs, and cloud services (AWS/GCP). Experienced in incident triage, root cause analysis, SOP execution, and maintaining reliable backend services.",
+  keywords: ["Karthikeyan Surendran", "Application Support Engineer", "Linux", "SQL", "AWS", "REST APIs", "Troubleshooting", "Incident Management", "Portfolio"],
   authors: [{ name: "Karthikeyan Surendran" }],
   icons: [
     { rel: "icon", url: "/favicon.ico" },
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
     { rel: "manifest", url: "/site.webmanifest" },
   ],
   openGraph: {
-    title: "Karthikeyan Surendran | Software Developer",
-    description: "Software Developer Portfolio",
+    title: "Karthikeyan Surendran | Application Support Engineer",
+    description: "Application Support Engineer Portfolio - Linux, SQL, AWS, APIs & Troubleshooting",
     type: "website",
   },
 };

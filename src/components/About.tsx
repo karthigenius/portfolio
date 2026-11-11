@@ -1,29 +1,29 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Server, Database, Code, Brain } from "lucide-react";
+import { Server, Database, Terminal, Cloud } from "lucide-react";
 
 export default function About() {
   const cards = [
     {
-      icon: <Brain className="text-sky-500" size={28} />,
-      title: "AI Integration",
-      desc: "Developing solutions with LLM APIs, RAG, and AI automated pipelines.",
+      icon: <Terminal className="text-sky-500" size={28} />,
+      title: "Incident & App Support",
+      desc: "Handling user-reported tickets, following SOPs, tracking change requests, and performing root-cause analysis.",
     },
     {
-      icon: <Code className="text-indigo-500" size={28} />,
-      title: "Full Stack",
-      desc: "Robust backend logic coupled with modern, interactive frontend interfaces.",
+      icon: <Server className="text-indigo-500" size={28} />,
+      title: "Linux & Systems",
+      desc: "Comfortable in the Linux CLI, analyzing application and system logs, configuring firewalls, and managing SSL certificates.",
     },
     {
-      icon: <Server className="text-emerald-500" size={28} />,
-      title: "Cloud & Devops",
-      desc: "Familiar with Docker, AWS/GCP, container hosting and virtualization.",
+      icon: <Database className="text-emerald-500" size={28} />,
+      title: "Databases & SQL",
+      desc: "Querying MySQL and PostgreSQL to inspect records, verify transactional states, and troubleshoot data discrepancies.",
     },
     {
-      icon: <Database className="text-amber-500" size={28} />,
-      title: "Data & Systems",
-      desc: "Working with Relational/Vector databases and building multiplayer backends.",
+      icon: <Cloud className="text-amber-500" size={28} />,
+      title: "Cloud & API Integrations",
+      desc: "Hands-on with AWS, GCP, Docker container logs, REST API debugging, and automation tools.",
     },
   ];
 
@@ -60,13 +60,16 @@ export default function About() {
             className="space-y-6 text-slate-600 dark:text-slate-300"
           >
             <h3 className="text-2xl font-bold text-slate-800 dark:text-white">
-              AI-Augmented Developer focused on Impactful Software
+              Support engineer with a developer's troubleshooting mindset
             </h3>
-            <p className="text-lg leading-relaxed">
-              Software Developer with hands-on experience in designing and developing web applications, backend systems, REST APIs, cloud deployments, and automation solutions. Proficient in Java, Python, JavaScript, React, Node.js, SQL, Docker, and cloud technologies, with experience integrating AI and LLM APIs into modern applications.
+            <p className="text-base md:text-lg leading-relaxed">
+              I am an Application Support Engineer based in Chennai with an MCA from SRM Institute of Science and Technology. My day-to-day focus is on keeping systems dependable: responding to incidents, digging into Linux logs, writing SQL queries to trace unexpected data states, and adhering to standard operating procedures (SOPs) to resolve problems cleanly.
             </p>
-            <p className="text-lg leading-relaxed">
-              I also bring practical experience in community management and operations, including overseeing a Discord server for a SAMP Server with 3000+ members, supporting moderation, engagement, and community coordination at scale. Whether it's crafting scalable Java backends, fine-tuning RAG systems with ChromaDB, or scaling deployments on Docker, I build with efficiency and performance in mind.
+            <p className="text-base md:text-lg leading-relaxed">
+              Before my current role at Simos Peripherals, I worked as a backend and support developer for SpaceShield, where I looked after Linux servers, REST APIs, and automated tools for an active 3,000+ member community. Having both developer training (Java, Python, Node.js) and real operational support experience helps me understand not just what error popped up, but where in the code or database layer things went wrong.
+            </p>
+            <p className="text-base md:text-lg leading-relaxed">
+              I prefer fixing root causes over applying temporary patches. Looking ahead, I am working toward deeper specialization in supporting high-reliability platforms, including trading environments and investment management systems.
             </p>
           </motion.div>
 

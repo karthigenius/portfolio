@@ -1,68 +1,68 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Cpu, Code2, Layers, Database, Cloud, Palette } from "lucide-react";
+import { Terminal, Code2, Layers, Database, Cloud, Wrench } from "lucide-react";
 
 export default function Skills() {
   const skillCategories = [
     {
-      title: "AI & LLMs",
-      icon: <Cpu className="text-amber-500" size={24} />,
+      title: "Support & Operations",
+      icon: <Wrench className="text-amber-500" size={24} />,
       skills: [
-        { name: "LLM APIs (OpenAI / Claude / Gemini)", level: 90 },
-        { name: "RAG Pipelines", level: 88 },
-        { name: "LangChain & AI Agents", level: 85 },
-        { name: "Vector DBs (Pinecone / ChromaDB)", level: 83 },
+        { name: "Incident & Problem Management", level: 92 },
+        { name: "Application Troubleshooting", level: 90 },
+        { name: "SOP & Change Management", level: 88 },
+        { name: "Log Analysis & Root Cause Triage", level: 90 },
       ],
     },
     {
-      title: "Languages",
-      icon: <Code2 className="text-blue-500" size={24} />,
-      skills: [
-        { name: "Java", level: 92 },
-        { name: "Python", level: 90 },
-        { name: "JavaScript", level: 88 },
-        { name: "C/C++", level: 85 },
-      ],
-    },
-    {
-      title: "Backend & Web",
-      icon: <Layers className="text-purple-500" size={24} />,
-      skills: [
-        { name: "Node.js / Express.js", level: 90 },
-        { name: "REST APIs", level: 92 },
-        { name: "Servlets / JDBC", level: 85 },
-        { name: "PHP", level: 85 },
-      ],
-    },
-    {
-      title: "Databases & Data",
-      icon: <Database className="text-emerald-500" size={24} />,
-      skills: [
-        { name: "SQL & MySQL", level: 93 },
-        { name: "PostgreSQL", level: 88 },
-        { name: "MongoDB", level: 82 },
-        { name: "Pandas", level: 88 },
-      ],
-    },
-    {
-      title: "Cloud & DevOps",
+      title: "Cloud & Linux Systems",
       icon: <Cloud className="text-sky-500" size={24} />,
       skills: [
-        { name: "AWS", level: 87 },
-        { name: "GCP", level: 85 },
-        { name: "Docker", level: 88 },
-        { name: "Linux", level: 87 },
+        { name: "Linux / Unix Administration & CLI", level: 90 },
+        { name: "AWS & GCP Cloud Platforms", level: 86 },
+        { name: "Docker & Basic Kubernetes", level: 84 },
+        { name: "SSL, Firewalls & Server Security", level: 86 },
       ],
     },
     {
-      title: "Frontend & Tools",
-      icon: <Palette className="text-pink-500" size={24} />,
+      title: "Databases & SQL",
+      icon: <Database className="text-emerald-500" size={24} />,
       skills: [
-        { name: "React.js", level: 85 },
-        { name: "HTML5 / CSS3", level: 92 },
-        { name: "Git", level: 90 },
-        { name: "Prompt Engineering", level: 88 },
+        { name: "SQL Querying & Data Verification", level: 92 },
+        { name: "MySQL", level: 90 },
+        { name: "PostgreSQL", level: 88 },
+        { name: "MongoDB", level: 82 },
+      ],
+    },
+    {
+      title: "APIs & Backend",
+      icon: <Layers className="text-purple-500" size={24} />,
+      skills: [
+        { name: "REST APIs & JSON Data Handling", level: 92 },
+        { name: "Node.js & Express.js", level: 88 },
+        { name: "Java Servlets & JDBC", level: 85 },
+        { name: "API Integrations & Automation", level: 88 },
+      ],
+    },
+    {
+      title: "Programming Languages",
+      icon: <Code2 className="text-blue-500" size={24} />,
+      skills: [
+        { name: "Python", level: 90 },
+        { name: "Core Java & J2EE", level: 88 },
+        { name: "JavaScript", level: 88 },
+        { name: "C++ & PHP", level: 82 },
+      ],
+    },
+    {
+      title: "Data & Developer Tools",
+      icon: <Terminal className="text-pink-500" size={24} />,
+      skills: [
+        { name: "Git & Version Control", level: 90 },
+        { name: "Pandas & Data Analytics", level: 86 },
+        { name: "HTML5, CSS3 & React.js", level: 86 },
+        { name: "AI/LLM APIs & Vector DBs (ChromaDB)", level: 84 },
       ],
     },
   ];
